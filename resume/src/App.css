@@ -1,11 +1,17 @@
+@import '~react-pro-sidebar/dist/css/styles.css';
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #171622;;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
