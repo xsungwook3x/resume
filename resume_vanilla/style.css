@@ -1,0 +1,24 @@
+:root {
+    /*Color*/
+    --color-white:#ffffff;
+    --color-ligth-white:#eeeeee;
+    --color-dark-white: #bdbdbd;
+
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-reqular: 19px;
+    --font-small:16px;
+    --font-micro: 14px;
+
+    /*Font Weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+
+}
+
+* {
+    box-sizing: border-box;
+}
