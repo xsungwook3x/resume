@@ -3,6 +3,7 @@
     --color-white:#ffffff;
     --color-ligth-white:#eeeeee;
     --color-dark-white: #bdbdbd;
+    --color-black: #000000;
 
     /* Font size */
     --font-large: 48px;
@@ -19,6 +20,36 @@
 
 }
 
+/*Uvibersal tags */
 * {
     box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0;
+}
+
+h2 {
+    font-size: var(--font-reqular);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+h3{
+    font-size: var(--font-reqular);
+    font-weight: var(--font-reqular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+p {
+    font-size: var(--font-reqular);
+    font-weight: var(--font-reqular);
+    color: var(--color-black);
+    margin: 8px 0;
 }
