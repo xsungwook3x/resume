@@ -3,12 +3,14 @@
     --color-white:#ffffff;
     --color-light-white:#eeeeee;
     --color-dark-white: #bdbdbd;
+    --color-dark-gray: #484554;
     --color-black: #000000;
     --color-light-purple:#D8C2FF;
     --color-light2-purple:#AD9AFF;
     --color-purple:#8173F4;
     --color-dark-purple:#554FC9;
     --color-dark2-purple:#222DA0;
+    --color-orange:#FFB94F;
 
     /* Font size */
     --font-large: 48px;
@@ -83,6 +85,14 @@ button {
     outline: none;
 }
 
+/* Section common*/
+.section {
+    padding: 50px;
+    text-align: center;
+    max-width:1200px;
+    margin: auto;
+}
+
 /* Nav */
 #navbar {
     display: flex;
@@ -125,6 +135,7 @@ button {
     background: url('imgs/background.png') center/cover no-repeat;
     padding: 40px;
     text-align: center;
+
 }
 
 .home__profile {
@@ -147,4 +158,83 @@ button {
     border: 2px solid var(--color-white);
     border-radius: 4px;
     color: var(--color-white);
+}
+
+/* about */
+#about {
+    background-color: var(--color-light-white);
+
+
+}
+
+.about__boxs {
+    margin: 40px;
+    
+}
+
+.about__box {
+    display: flex;
+    margin: 30px 0;
+}
+
+.box__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+.box__avatar:nth-child(odd) {
+    margin-right: 40px;
+
+}
+
+.box__avatar:nth-child(even) {
+    margin-left: 40px;
+
+}
+
+
+.box_speech-bubble {
+    padding: 18px;
+    
+    border-radius: var(--size-border-radius);
+
+}
+
+.box_speech-bubble:nth-child(odd){
+    border: 4px;
+    border-color: var(--color-light2-purple);
+    background-color: var(--color-light-purple);
+}
+
+.box_speech-bubble:nth-child(even){
+    border: 4px;
+    border-color: var(--color-purple);
+    background-color: var(--color-light2-purple);
+}
+
+.box_speech-bubble p {
+    color: var(--color-light-gray)
+}
+
+.about__career {
+
+    align-items: center;
+}
+
+.career__description {
+    margin: 0 16px;
+    text-align: left;
+}
+.about__career__career__title,
+.about__career__education__title {
+    color: var(--color-orange);
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+}
+
+.description__text {
+    color: var(--color-dark-gray);
+    font-size: var(--font-small);
 }
