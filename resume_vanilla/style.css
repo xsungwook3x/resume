@@ -3,6 +3,7 @@
     --color-white:#ffffff;
     --color-light-white:#eeeeee;
     --color-dark-white: #bdbdbd;
+    --color-gray: #797585;
     --color-dark-gray: #484554;
     --color-black: #000000;
     --color-light-purple:#D8C2FF;
@@ -26,7 +27,13 @@
 
     /*size*/
     --size-border-radius: 4px;
+
+
+    /*animation duration*/
+    --animation-duration: 300ms;
 }
+
+
 
 /*Uvibersal tags */
 * {
@@ -237,4 +244,92 @@ button {
 .description__text {
     color: var(--color-dark-gray);
     font-size: var(--font-small);
+}
+/* skills */
+#skills {
+    background-color: #FBF8FF;
+}
+
+.skills__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major_icon {
+    width: 170px;
+    height: 170px;
+    font-size: 70px;
+    line-height: 170px;
+    margin:auto;
+    color: var(--color-dark-purple);
+    border: 2px solid var(--color-light2-purple);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major_icon i{
+    transition: all var(--animation-duration) ease;
+}
+
+.major_icon :hover{
+    color:  var(--color-light-purple);
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.major_description {
+    color: var(--color-dark-gray);
+    font-size: var(--font-small);
+}
+
+.skills__container {
+    background-color: var(--color-gray);
+    padding: 20px;
+    border-radius: var(--size-border-radius);
+}
+
+.skills_etc {
+    border: 1px solid var(--color-dark-gray);
+    border-radius: var(--size-border-radius);
+    background-color: var(--color-dark-gray);
+    color: var(--color-white);
+}
+
+.etc_title {
+    color: var(--color-white);
+}
+
+.skillset {
+    background-color: var(--color-dark-gray);
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 40px;
+    border-radius: var(--size-border-radius);
+}
+
+.skillset__title {
+    color: var(--color-white);
+}
+
+.skill {
+    margin: 20px;
+}
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+    color:var(--color-white);
+    margin: 5px;
+}
+
+.skill__bar {
+    width: 100%;
+    height: 7px;
+    background-color: var(--color-dark-white);
+    border-radius: 5px;
+}
+.skill__value {
+    width: 40%;
+    height: 7px;
+    background-color: var(--color-orange);
+    border-radius: 5px;
 }
