@@ -139,9 +139,10 @@ button {
 
 /*home*/
 #home {
-    background: url('imgs/background.png') center/cover no-repeat;
-    padding: 40px;
+    background: url("imgs/background.png") center/cover no-repeat;
+    padding: 60px;
     text-align: center;
+
 
 }
 
