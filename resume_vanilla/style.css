@@ -137,6 +137,15 @@ button {
     
 }
 
+.navbar__toggle-btn {
+    position: absolute;
+    top:23px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
 /*home*/
 #home {
     background: url("imgs/background.png") center/cover no-repeat;
@@ -458,4 +467,48 @@ button {
 .contact__links i:hover {
     transform: scale(1.2);
     color: var(--color-orange);
+}
+
+/* 반응형 */
+/* for below 768px screen width*/
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+
+    }
+
+    #navbar {
+        flex-direction:column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .box__avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .box_speech-bubble p{
+        font-size: var(--font-micro);
+    }
+
+    .skills__majors {
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px
+    }
+
+    .item {
+        flex-grow: 1;
+    }
+
+
 }
