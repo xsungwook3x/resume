@@ -22,15 +22,40 @@ navbarMenu.addEventListener('click',(event)=> {
         return;
     }
 
-    console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollIntoView(link);
 });
 
 //contact button
 
 const contactMeBTN=document.querySelector('.home__contact');
 contactMeBTN.addEventListener('click',()=>{
-    const scrollTo=document.querySelector('#contact');
-    scrollTo.scrollIntoView({behavior:'smooth'});
+    scrollIntoView('#contact');
+});
+
+// 화면 내리면 저절로 흐려지게 만들어주는 부분
+const home = document.querySelector('#home_container');
+const homeHeight=home.getBoundingClientRect().height;
+document.addEventListener('scroll',()=>{
+    home.style.opacity=1-window.scrollY / homeHeight;
+
 })
+
+// scrollup button
+const arrowUp=document.querySelector('.arrow-up')
+document.addEventListener('scroll',()=>{
+    if(window.scrollY > homeHeight/2){
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
+
+arrowUp.addEventListener('click',()=>{
+    scrollIntoView('#home');
+})
+
+/* util*/
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: 'smooth'});
+}
