@@ -134,14 +134,14 @@ button {
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item.active {
-    border: 1px solid var(--color-white);
+    border: 1px solid transparent;
     border-radius: var(--size-border-radius);
 }
 
+
 .navbar__menu__item:hover {
+    border: 1px solid white;
+    border-radius: var(--size-border-radius);
     background-color: var(--color-dark-purple);
     
 }
@@ -368,13 +368,13 @@ button {
     padding: 8px 49px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
     background-color: var(--color-light2-purple);
     color: white;
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
@@ -450,7 +450,7 @@ button {
 }
 
 .item__description h3{
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 .item__description h3:after{
@@ -458,9 +458,9 @@ button {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 70px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -522,6 +522,11 @@ button {
     #navbar {
         flex-direction:column;
         align-items: flex-start;
+        background-color: var(--color-dark2-purple);
+    }  
+
+    #navbar.navbar--dark {
+        padding:16px;
     }
 
     .navbar__menu{
@@ -529,6 +534,10 @@ button {
         text-align: center;
         width: 100%;
         display: none;
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .box__avatar {

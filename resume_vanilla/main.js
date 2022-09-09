@@ -7,6 +7,7 @@ document.addEventListener('scroll', () => {
 
     if(window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--dark');
+        navbarMenu.classList.remove('open');
     }else {
         navbar.classList.remove('navbar--dark');
     }
@@ -21,9 +22,15 @@ navbarMenu.addEventListener('click',(event)=> {
     if(link == null){
         return;
     }
-
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 });
+
+//navbar toggle button for small screen
+const navbarToggleBtn=document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open');
+})
 
 //contact button
 
@@ -63,6 +70,15 @@ workBtnContainer.addEventListener('click',(e)=>{
     if(filter==null){
         return;
     }
+
+    // 프젝 버튼 선택된거 표시해주는 부분
+    const active=document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target=e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    target.classList.add('selected');
+
+
+
     projectContainer.classList.add('anim-out');
 
     setTimeout(()=>{
@@ -73,7 +89,7 @@ workBtnContainer.addEventListener('click',(e)=>{
                 project.classList.add('invisible');
             }
         });
-        
+
         projectContainer.classList.remove('anim-out');
     },300);
 });
