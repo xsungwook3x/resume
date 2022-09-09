@@ -148,9 +148,9 @@ button {
 
 .navbar__toggle-btn {
     position: absolute;
-    top:23px;
-    right: 32px;
-    font-size: 24px;
+    top: 17px;
+    right: 20px;
+    font-size: 20px;
     color: var(--color-white);
     display: none;
 }
@@ -185,6 +185,10 @@ button {
     border: 2px solid var(--color-white);
     border-radius: 4px;
     color: var(--color-white);
+}
+
+.home__contact:hover{
+    background-color: var(--color-purple);
 }
 
 /* about */
@@ -224,7 +228,9 @@ button {
 
 .box_speech-bubble {
     padding: 18px;
-    
+    display: flex;
+    justify-content : center;
+    align-items : center;
     border-radius: var(--size-border-radius);
 
 }
@@ -365,7 +371,8 @@ button {
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radius);
     font-size: var(--font-reqular);
-    padding: 8px 49px;
+    padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -377,7 +384,7 @@ button {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
-    top: 0;
+    top: 6px;
 }
 
 .category__count {
@@ -388,9 +395,9 @@ button {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -514,6 +521,17 @@ button {
 /* 반응형 */
 /* for below 768px screen width*/
 @media screen and (max-width: 768px) {
+    :root {
+        --font-large:30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14px;
+        --font-micro: 12px;
+    }
+
+    .section {
+        padding:16px;
+    }
     .navbar__toggle-btn {
         display: block;
 
@@ -539,14 +557,27 @@ button {
     .navbar__menu.open {
         display: block;
     }
+    
+    .about__box {
+        flex-direction:column;
+    }
 
     .box__avatar {
         width: 80px;
         height: 80px;
+        margin: auto;
+    }
+
+    .box_speech-bubble {
+        order:1;
+        display: flex;
+        justify-content : center;
+        align-items : center;
     }
 
     .box_speech-bubble p{
         font-size: var(--font-micro);
+        
     }
 
     .skills__majors {
@@ -561,5 +592,17 @@ button {
         flex-grow: 1;
     }
 
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
+    }
 
+    .arrow-up {
+        width: 50px;
+        height:50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
+    }
 }
