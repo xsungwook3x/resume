@@ -95,22 +95,16 @@ workBtnContainer.addEventListener('click',(e)=>{
 });
 
 /*typing action*/
-const content = "지식 공유를 추구하는 개발자 김성욱입니다.";
-const text=document.querySelector('.home__title2');
-let index=0;
-
-function sleep(delay){
-    const start = new Date().getTime();
-    while (new Date().getTime() <start + delay);
-}
+const content = "안녕하세요👋 \n 지식 공유를 추구하는 개발자 김성욱입니다.";
+const text=document.querySelector('.home__title');
+let i=0;
 
 function typing(){
-    text.textContent += content[index++];
-    
-    if(index > content.length){
-        text.textContent = ""
-        index = 0;
-
+    let txt = content[i++];
+    text.innerHTML += txt=== "\n" ? "<br/>": txt;
+    if (i > content.length) {
+        text.textContent = "";
+        i = 0;
     }
     
 }

@@ -175,10 +175,6 @@ button {
     color: var(--color-white);
 }
 
-.home__title2 {
-    color: var(--color-white);
-    transition: all var(--animation-duration) ease-in-out;
-}
 
 .home__contact {
     font-size: var(--font-reqular);
