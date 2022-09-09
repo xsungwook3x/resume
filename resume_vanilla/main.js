@@ -94,6 +94,28 @@ workBtnContainer.addEventListener('click',(e)=>{
     },300);
 });
 
+/*typing action*/
+const content = "지식 공유를 추구하는 개발자 김성욱입니다.";
+const text=document.querySelector('.home__title2');
+let index=0;
+
+function sleep(delay){
+    const start = new Date().getTime();
+    while (new Date().getTime() <start + delay);
+}
+
+function typing(){
+    text.textContent += content[index++];
+    
+    if(index > content.length){
+        text.textContent = ""
+        index = 0;
+
+    }
+    
+}
+setInterval(typing, 300)
+
 /* util*/
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
