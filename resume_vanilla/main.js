@@ -12,6 +12,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
+// navbar move to target
 const navbarMenu =document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event)=> {
 
@@ -25,3 +26,11 @@ navbarMenu.addEventListener('click',(event)=> {
     const scrollTo = document.querySelector(link);
     scrollTo.scrollIntoView({behavior: 'smooth'});
 });
+
+//contact button
+
+const contactMeBTN=document.querySelector('.home__contact');
+contactMeBTN.addEventListener('click',()=>{
+    const scrollTo=document.querySelector('#contact');
+    scrollTo.scrollIntoView({behavior:'smooth'});
+})
