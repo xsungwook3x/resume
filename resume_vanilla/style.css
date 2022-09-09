@@ -353,12 +353,34 @@ button {
     border-radius: 5px;
 }
 .skill__value {
-    width: 40%;
     height: 7px;
     background-color: var(--color-orange);
     border-radius: 5px;
 }
 
+.skill__value.ht{
+    width: 70%;
+}
+
+.skill__value.css{
+    width: 50%;
+}
+
+.skill__value.js{
+    width: 50%;
+}
+
+.skill__value.java{
+    width: 50%;
+}
+
+.skill__value.re{
+    width: 40%;
+}
+
+.skill__value.spring{
+    width: 40%;
+}
 /* project */
 
 
